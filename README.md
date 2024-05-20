@@ -26,7 +26,7 @@ docker-compose up
 ```
 http://localhost:8080
 ```
-* For send message from Kafka, do this in http://localhost:8080:
+* For send message from Kafka, do this in http://localhost:8080/send:
 
 Join chat:
 ```

@@ -20,6 +20,6 @@ public class KafkaController {
     public String sendMessage(@RequestBody Message message) {
         kafkaTemplate.send("message-topic", message);
         messagingTemplate.convertAndSend("/topic/public", message);
-        return "Message sent: " + message;
+        return "Message sent!";
     }
 }
