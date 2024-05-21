@@ -23,9 +23,9 @@ public class ChatController {
     public void sendMessage(@Payload Message message, SimpMessageHeaderAccessor headerAccessor) {
         message.setSessionId(headerAccessor.getSessionId());
         messageProducer.sendMessage("message-topic", message);
-        logger.info("Sending message to /topic/public: " + message);
+        logger.info("Sending message to /topic/public: {}", message);
         messagingTemplate.convertAndSend("/topic/public", message);
-        logger.info("Message sent to /topic/public: " + message);
+        logger.info("Message sent to /topic/public: {}", message);
     }
 
 
